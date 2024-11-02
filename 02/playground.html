@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="mensagem"></div>
+    <div id="idade"></div>
+    <p id="novoNome"></p>
+
+    <h1>Entrada de Dados com o Input e Botão</h1>
+
+    <label for="nomeInput">Atualize seu nome:</label><br>
+    <input type="text" id="nomeInput" placeholder="Digite aqui...">
+    <button onclick="exibirNome()">Enviar</button>
+
+    <script>
+        console.log("Olá Mundo!");
+        let nome = "Lucas";
+        document.getElementById("mensagem").innerText = ("Seu nome é: " + nome);
+
+        // let idade = prompt("Qual a sua idade?");
+        // console.log(idade);
+        // document.getElementById("idade").innerText = ("Você tem " + idade + " anos");
+
+        function exibirNome() {
+            nome = document.getElementById("nomeInput").value;
+            console.log("Novo nome: " + nome);
+            document.getElementById("novoNome").innerText = "Novo nome: " + nome;
+        }
+        
+    </script>
+</body>
+
+</html>

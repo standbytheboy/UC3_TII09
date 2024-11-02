@@ -10,17 +10,15 @@
 
     <script>
         let name = prompt("Qual o seu nome?");
-        let color = prompt("Qual sua cor favorita?");
+        let color = prompt("Qual sua cor favorita? Responda em inglês!!");
 
         document.getElementById("info").innerText = "Olá, " + name + "!";
 
         let bg = document.body.style.backgroundColor = color;
 
-        if (bg === "blue" || bg === "black") {
+        if (bg === "blue" || bg === "black" || bg === "red") {
             document.getElementById("info").style.color = "white";
         }
-
-
     </script>    
 </body>
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+
+<body>
+    <input type="range" id="velocidade" min="0" max="220" value="100">
+    <label for="velocidade">Velocidade do carro</label><br><br>
+    <button onclick="verificarVelocidade()">Será que você foi multado?</button>
+    <h1 id="multado"></h1>
+
+    <script>
+        function verificarVelocidade() {
+            let multa = document.getElementById("velocidade").value;
+            let entregarMulta = multa > 80 ? "Multado" : "";
+            document.getElementById("multado").innerText = entregarMulta;
+        }
+        
+    </script>
+</body>
+
+</html>

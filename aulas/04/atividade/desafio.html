@@ -17,7 +17,7 @@
         function verificarVelocidade() {
             let multa = document.getElementById("velocidade").value;
             let entregarMulta = multa > 80 ? "Multado" : "";
-            document.getElementById("multado").innerText = entregarMulta;
+            entregarMulta ? document.getElementById("multado").innerText = entregarMulta + " por andar a " + multa + "km/h" : document.getElementById("multado").innerText = "Você andou a " + multa + "km/h"
         }
         
     </script>

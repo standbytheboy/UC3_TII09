@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Atividade</title>
+</head>
+
+<body>
+    <h1>Gerador de Tabuada</h1>
+    <p>Insira um número para gerar a tabuada completa:</p>
+    <input type="number" placeholder="Insira o seu número aqui" id="input">
+    <button onclick="data()">Gerar Tabuada</button>
+    <div class="grid">
+        <div id="lista"></div>
+    </div>
+
+    <script>
+        function data() {
+            // pega o valor que o usuário inseriu
+            let number = parseInt(document.getElementById("input").value)
+
+            // cria uma lista não ordenada
+            let list = "<ul>"            
+
+            // laço de repetição que trabalha com a li, já que antes criamos uma lista não ordenada
+            list += "<li><strong>Tabuada de Adição</strong></li>";
+            for (i = 1; i <= 10; i++) {
+                list += `<li> ${number} + ${i} = ${number + i} </li>`;
+            }
+
+            list += "<li><strong>Tabuada de Subtração</strong></li>";
+            for (i = 1; i <= 10; i++) {
+                list += `<li> ${number} - ${i} = ${number - i} </li>`;
+            }
+
+            list += "<li><strong>Tabuada de Multiplicação</strong></li>";
+            for (i = 1; i <= 10; i++) {
+                list += `<li> ${number} x ${i} = ${number * i} </li>`;
+            }
+
+            list += "<li><strong>Tabuada de Divisão</strong></li>";
+            for (i = 1; i <= 10; i++) {
+                list += `<li> ${number} / ${i} = ${number / i} </li>`;
+            }
+
+            // mostra a informação no html
+            document.getElementById("lista").innerHTML = list
+        }
+    </script>
+</body>
+
+</html>

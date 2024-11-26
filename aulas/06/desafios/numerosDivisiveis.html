@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Divisíveis por 3 ou 5</title>
+</head>
+
+<body>
+    <h1>Quantos números são divisíveis por 3 ou 5?</h1>
+    <p>Coloque o número na caixa abaixo, para ser o limite da nossa conta. Por exemplo, se você colocar "50", quantos
+        números de 0 até 50 são divisíveis por 3 ou 5? Vamos descobrir!</p>
+    <input type="number" id="apresentandoNaTela" placeholder="Coloque o número limite aqui...">
+    <button onclick="final()">Resultado</button>
+    <div id="resposta"></div>
+
+    <script>
+        function final() {
+            let contador = 0;
+            let i = document.getElementById("apresentandoNaTela").value
+            for (let total = 1; total <= i; total++) {
+                if (total % 3 == 0 || total % 5 == 0) {
+                    contador++
+                }
+            }
+            document.getElementById("resposta").innerText = contador + " números são divisíveis por 3 ou 5"
+        }
+    </script>
+</body>
+
+</html>

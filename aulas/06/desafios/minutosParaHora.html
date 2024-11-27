@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minuto Pra Hora</title>
+</head>
+<body>
+    <script>
+        let min = prompt("Digite os minutos desejados: ");
+        let hour = parseInt(min / 60);
+        let resto = min % 60;
+        console.log(`Os minutos totalizam ${hour} horas e ${resto} minutos`);
+        
+        // while(minutos > 60) {
+        //     minutos = minutos - 60
+        //     horas++;
+        // }
+
+        // console.log("Total de horas: " + horas + ":" + minutos);
+    </script>
+</body>
+</html>

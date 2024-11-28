@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes</title>
+</head>
+<body>
+    <h1>Eventos</h1>
+
+    <!--Evento Inline-->
+    <button onclick="alert('AAAAAAAAAAAHHH')">Clique Aqui</button>
+
+    <!--Buscar Evento no JavaScript-->
+    <button id="meuBotao">Não Click!</button>
+    <button id="teste" onmouseover="mudaEstilo(this)">Passe o mouse aqui</button>
+
+    <!--Evento OnMouseOver-->
+    <p onmouseover="mudaOTexto(this)">Passe o mouse aqui</p>
+
+    <input onkeydown="mostrarTecla(event)" type="text">
+
+    <script>
+        const btnClick = document.getElementById("meuBotao");      
+
+        btnClick.addEventListener("click", () => {
+            alert("Você é muito teimoso");
+        });
+
+        function mudaEstilo(elemento) {
+            elemento.innerText = "O mouse passou por aqui";
+            elemento.style.color = "white";
+            elemento.style.backgroundColor = "black";
+            elemento.style.border = "none";
+            elemento.style.borderRadius = "10px";
+        }
+        
+        function mudaOTexto(elemento) {
+            elemento.innerText = "O mouse passou por aqui";
+        }
+
+        function mostrarTecla(evt) {
+            console.log("Tecla digitada:", evt.key)
+        }
+
+    </script>
+</body>
+</html>

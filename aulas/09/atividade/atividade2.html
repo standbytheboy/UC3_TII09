@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+<body>
+    <h1 id="title">Título</h1>
+    <p id="paragraph">Parágrafo</p>
+    <button id="btn">Botão</button>
+
+    <script>
+        const title = document.getElementById("title")
+        const paragraph = document.getElementById("paragraph")
+        const alterando = document.getElementById("btn");
+
+        alterando.addEventListener("click", () => {
+            paragraph.innerText = "Parágrafo Modificado"
+            title.remove();
+            let newElement = document.createElement("p");
+            newElement.innerText = "Outro elemento";
+            paragraph.append(newElement);
+        })
+    </script>
+</body>
+</html>

@@ -4,55 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <input type="text" id="tasks" placeholder="Escreva suas tarefas aqui...">
-    <button id="addTask">Adicionar</button>
-    <ul id="list"></ul>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        <input type="text" id="tasks" placeholder="Escreva suas tarefas aqui...">
+        <button id="addTask">Adicionar</button>
+        <ul id="list"></ul>
+    </div>
 
-    <script>
-
-        let addTask = document.getElementById("addTask");
-        let list = document.getElementById("list")
-
-        addTask.addEventListener("click", () => {
-            let text = document.getElementById("tasks").value;
-
-            let newTask = document.createElement("li");
-            newTask.innerText = text;
-            list.append(newTask);
-
-            let newCheck = document.createElement("input");
-            newCheck.type = "checkbox";
-            newTask.append(newCheck);
-            newCheck.id = "teste";
-
-            let remove = document.createElement("button");
-            remove.innerText = "Remover";
-            newTask.append(remove);
-
-            remove.addEventListener("click", () => {
-                newTask.remove();
-            })
-
-            // function clicked() {
-
-            //     if (document.querySelector("#teste").checked) {
-                    
-            //     }
-            // }
-
-            // newCheck.change(function (event) {
-            //     newCheck = event.target;
-            //     if (newCheck.checked) {
-            //         let vamoLa = document.createElement("del");
-            //         text.append(vamoLa)
-            //     }
-            // });
-        })
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

@@ -10,12 +10,21 @@ addTask.addEventListener("click", () => {
     let taskText = document.createElement("span"); // chat
     let remove = document.createElement("button");
 
-    space.append(newTask);
+    if (!text) {
+        alert("Digite uma tarefa válida!");
+        tasks.focus();
+        return;
+    }
+
+    tasks.value = "";
+    tasks.focus();
+
     newCheck.type = "checkbox";
-    newTask.append(newCheck);
+    space.append(newCheck);
+    space.append(taskText);
+    newTask.append(space);
 
     taskText.innerText = text; // chat
-    newTask.append(taskText); // chat
     list.append(newTask);
 
     remove.className = "btnApagar"
@@ -28,6 +37,13 @@ addTask.addEventListener("click", () => {
 
 
     newCheck.addEventListener("change", () => {
-        newTask.classList.toggle("completed", newCheck.checked) // botão checado
+        taskText.classList.toggle("completed", newCheck.checked) // botão checado
     });
+
 })
+
+tasks.addEventListener("keydown", (event) => {
+    if(event.key === "Enter"){
+        addTask.click();
+    }
+});

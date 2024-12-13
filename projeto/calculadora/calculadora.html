@@ -9,37 +9,43 @@
 </head>
 
 <body>
-    <div class="calculator">
-        <h1>Calculadora</h1>
-        <input type="number" id="visor">
-        <div id="first-line" class="lines">
-            <button class="number">7</button>
-            <button class="number">8</button>
-            <button class="number">9</button>
-            <button class="number">&#247;</button>
-        </div>
-        <div id="second-line" class="lines">
-            <button class="number">4</button>
-            <button class="number">5</button>
-            <button class="number">6</button>
-            <button class="number">x</button>
-        </div>
-        <div id="third-line" class="lines">
-            <button class="number">1</button>
-            <button class="number">2</button>
-            <button class="number">3</button>
-            <button class="number">-</button>
-        </div>
-        <div id="fourth-line" class="lines">
-            <button class="number">0</button>
-            <button class="number">.</button>
-            <button class="number">C</button>
-            <button class="number">+</button>
-        </div>
-        <div id="fifth-line" class="lines">
-            <button class="number">=</button>
+    <div class="calculator flex">
+        <input type="text" id="visor" placeholder="0" readonly>
+        <div class="card">
+            <div class="lines">
+                <button class="btn flex" id="clear">C</button>
+                <button class="btn flex">(</button>
+                <button class="btn flex">)</button>
+                <button class="btn flex" data-value="/">&#247;</button>
+            </div>
+            <div class="lines">
+                <button class="btn flex">7</button>
+                <button class="btn flex">8</button>
+                <button class="btn flex">9</button>
+                <button class="btn flex" data-value="*">x</button>
+            </div>
+            <div class="lines">
+                <button class="btn flex">4</button>
+                <button class="btn flex">5</button>
+                <button class="btn flex">6</button>
+                <button class="btn flex">-</button>
+            </div>
+            <div class="lines">
+                <button class="btn flex">1</button>
+                <button class="btn flex">2</button>
+                <button class="btn flex" >3</button>
+                <button class="btn flex">+</button>
+            </div>
+            <div class="lines">
+                
+                <button class="btn flex" id="backspace">←</button>
+                <button class="btn flex">0</button>
+                <button class="btn flex">.</button>
+                <button class="flex last" id="equals">=</button>
+            </div>
         </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>

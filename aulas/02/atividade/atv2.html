@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./atv2.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+                <a href="../aula/index.html" class="brand">Principal</a>
+                <ul class="nav-links">
+                    <li><a href="#">Anterior</a></li>
+                    <li><a href="#atividade">Atividade</a></li>
+                    <li><a href="#">Próxima</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+       <div class="container">
+        <h1>Bem-vindo ao Exercício de JavaScript</h1>
+        <label for="nomeInput">Digite seu nome:</label>
+        <input type="text" id="nomeInput" placeholder="Digite aqui...">
+        <button onclick="exibirInfo()">Mostrar informações</button>
+        <p id="infos"></p>
+       </div>
+    </section>
+    <script>
+        function exibirInfo() {
+            let nome = "";
+            nome = document.getElementById("nomeInput").value;
+            let age = prompt("Qual a sua idade?");
+            document.getElementById("infos").innerText = "Olá, " + nome + "! Você tem " + age + " anos.";
+        }
+    </script>
+</body>
+</html>

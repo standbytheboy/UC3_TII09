@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Minuto Pra Hora</title>
+</head>
+
+<body>
+    <h1>Conversor de Minutos para Horas</h1>   
+    <input type="number" placeholder="Digite os minutos aqui:" id="minutos">
+    <button onclick="convert()">Converter</button>
+    <p id="result"></p>
+    <p id="result2"></p>
+
+    <script>
+        function convert() {
+            document.getElementById("result").innerText = "";
+            document.getElementById("result2").innerText = "";
+            const min = document.getElementById("minutos").value;
+            const hour = Math.floor(min / 60);
+            const day = Math.floor(hour / 24);
+            const resto = min % 60;
+
+            if(min === "" || min <= 0) {
+                document.getElementById("result")
+                    .innerText = "Por favor, insira um número válido.";
+                return;
+            }
+            document.getElementById("result").innerText = (`Os minutos totalizam ${hour} hora(s) e ${resto} minuto(s)`);
+            document.getElementById("result2").innerText = (`Arredondando, isso totaliza ${day} dias.`);
+        }
+        // while(minutos > 60) {
+        //     minutos = minutos - 60
+        //     horas++;
+        // }
+
+        // console.log("Total de horas: " + horas + ":" + minutos);
+
+    </script>
+</body>
+
+</html>

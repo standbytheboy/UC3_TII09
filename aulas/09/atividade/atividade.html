@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionando itens na lista</title>
+</head>
+<body>
+    <h1 id="titulo">Olá Mundo</h1>
+    <p class="texto">Primeiro Parágrafo</p>
+    <p class="texto">Segundo Parágrafo</p>
+    <ul id="lista">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <script>
+        let lista = document.getElementById("lista");
+        let newLi = document.createElement("li");
+        newLi.innerText = "Item 3";
+        lista.appendChild(newLi);
+
+        // removendo o primeiro item da lista
+        let primeiroItem = lista.firstElementChild;
+        lista.removeChild(primeiroItem);
+    </script>
+</body>
+</html>

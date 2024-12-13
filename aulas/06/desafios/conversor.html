@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Conversor</title>
+</head>
+
+<body>
+    <h1>Conversor de Celsius para Fahrenheint</h1>
+    <p>Insira um número em Celsius para converter em Fahrenheint:</p>
+    <input type="number" id="graus" placeholder="Insira o número aqui">
+    <button onclick="resultado()">Converter!</button>
+    <div id="mostrarResultado"></div>
+
+    <script>
+        function resultado() {
+            let celsius = document.getElementById("graus").value;
+            let conversor = (celsius * (9 / 5)) + 32
+            document.getElementById("mostrarResultado").innerText = "A temperatura em Fahrenheint é: " + conversor + "°F";
+        }
+    </script>
+</body>
+
+</html>

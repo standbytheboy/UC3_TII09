@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá!</title>
+</head>
+<body>
+    <h1 id="info"></h1>
+
+    <script>
+        let name = prompt("Qual o seu nome?");
+        let color = prompt("Qual sua cor favorita? Responda em inglês!!");
+
+        document.getElementById("info").innerText = "Olá, " + name + "!";
+
+        let bg = document.body.style.backgroundColor = color;
+
+        if (bg === "blue" || bg === "black" || bg === "red") {
+            document.getElementById("info").style.color = "white";
+        }
+    </script>    
+</body>
+>>>>>>> 14a922296730e2b4e54d741aae078851fc9a76c7
+</html>

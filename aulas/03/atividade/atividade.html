@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -37,4 +38,45 @@
 
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas</title>
+</head>
+
+<body>
+    <button onclick="tabuada()">Tabuada</button>
+    <script>
+
+        let number = prompt("Informe um número de 1 a 10");
+        let newNumber = parseInt(number);
+        let newCount = parseInt(count);
+        
+        function tabuada() {
+            //soma
+            for (var count = 1; count <= 10; count++)
+                document.write(newNumber + "+" + count + " = " + (newNumber + count) + "<br />");
+
+            //subtracao 
+            for (var count = 1; count <= 10; count++)
+                document.write(newNumber + "-" + count + " = " + (newNumber - count) + "<br />");
+
+            // multiplicação
+            for (var count = 1; count <= 10; count++)
+                document.write(newNumber + "x" + count + " = " + (newNumber * count) + "<br />");
+
+            //divisao
+            for (var count = 1; count <= 10; count++)
+                document.write(newNumber + "/" + count + " = " + (newNumber / count) + "<br />");
+        }
+
+    </script>
+
+</body>
+
+>>>>>>> be66ceae75c9cee276af19c64fd8391ab039e209
 </html>

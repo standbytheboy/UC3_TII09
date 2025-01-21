@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -33,4 +34,41 @@
     </script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" placeholder="Insira um número..." id="numero"> <!--Entrada dos dados-->
+    <div id="tabuada"></div> <!--Saída dos dados-->
+    <button onclick="resultado()">Resposta</button>
+    <script>
+        // Pedir o número
+        let numero = document.getElementById("numero").value;
+
+        // Realizar multiplicação
+            function resultado() {
+                document.getElementById("tabuada").innerText =
+                    numero + " x 1 =" + (numero * 1) + " \n" + 
+                    numero + " x 2 =" + (numero * 2) + " \n" +
+                    numero + " x 3 =" + (numero * 3) + " \n" +
+                    numero + " x 4 =" + (numero * 4) + " \n" +
+                    numero + " x 5 =" + (numero * 5) + " \n" +
+                    numero + " x 6 =" + (numero * 6) + " \n" +
+                    numero + " x 7 =" + (numero * 7) + " \n" +
+                    numero + " x 8 =" + (numero * 8) + " \n" +
+                    numero + " x 9 =" + (numero * 9) + " \n" +
+                    numero + " x 10 =" + (numero * 10) 
+            }
+
+    </script>
+</body>
+
+>>>>>>> be66ceae75c9cee276af19c64fd8391ab039e209
 </html>

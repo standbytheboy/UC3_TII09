@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora em JavaScript</title>
+</head>
+
+<body>
+    <div class="calculator flex">
+        <input type="text" id="visor" placeholder="0" readonly>
+        <div class="card">
+            <div class="lines">
+                <button class="btn flex" id="clear">C</button>
+                <button class="btn flex">(</button>
+                <button class="btn flex">)</button>
+                <button class="btn flex" data-value="/">&#247;</button>
+            </div>
+            <div class="lines">
+                <button class="btn flex">7</button>
+                <button class="btn flex">8</button>
+                <button class="btn flex">9</button>
+                <button class="btn flex" data-value="*">x</button>
+            </div>
+            <div class="lines">
+                <button class="btn flex">4</button>
+                <button class="btn flex">5</button>
+                <button class="btn flex">6</button>
+                <button class="btn flex">-</button>
+            </div>
+            <div class="lines">
+                <button class="btn flex">1</button>
+                <button class="btn flex">2</button>
+                <button class="btn flex" >3</button>
+                <button class="btn flex">+</button>
+            </div>
+            <div class="lines">
+                
+                <button class="btn flex" id="backspace">←</button>
+                <button class="btn flex">0</button>
+                <button class="btn flex">.</button>
+                <button class="flex last" id="equals">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

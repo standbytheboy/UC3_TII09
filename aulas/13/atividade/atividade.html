@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="atividade.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Lista de Itens</h1>
+    <ul>
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+        <li class="item">Item 4</li>
+    </ul>
+
+    <script>
+        const itensDaLista = document.querySelectorAll(".item");
+
+        itensDaLista.forEach(item => {
+           item.addEventListener("click", () => {
+            item.classList.toggle("highlight");
+           })
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    max-width: 1000px;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding: 30px;
+    width: 150px;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.card-selected {
+    background-color: lightblue;
+    border: 1px solid darkblue;
+}
+
+.btns {
+    margin-top: 20px;
+}
+
+.btns button {
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    color: white;
+}
+
+#btnComprar {
+    background-color: green;
+}
+
+#btnRedefinir {
+    background-color: red;
+}
+
+button:hover {
+    opacity: 0.8;
+}

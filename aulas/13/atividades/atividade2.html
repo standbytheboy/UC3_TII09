@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="atividade2.css">
+    <title>Atividade 2</title>
+</head>
+
+<body>
+    <h1>Lista de Itens</h1>
+
+    <ul>
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+        <li class="item">Item 4</li>
+    </ul>
+    <button id="resetStyles">Redefinir Estilos</button>
+    <button id="hideUnselected">Esconder Destacados</button>
+
+    <script>
+        const items = document.querySelectorAll(".item");
+        const resetStyles = document.getElementById("resetStyles");
+        const hideBtn = document.getElementById("hideUnselected");
+
+        items.forEach(itm => {
+            itm.addEventListener("click", () => {
+                itm.classList.toggle("highlight");
+            });
+        })
+
+        resetStyles.addEventListener("click", () => {
+            items.forEach(itm => {
+                itm.classList.remove("highlight")
+            })
+        })
+
+        hideBtn.addEventListener("click", () => {
+            items.forEach(itm => {
+                if (itm.classList.contains("highlight")) {
+                    itm.remove();
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

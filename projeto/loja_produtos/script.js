@@ -27,8 +27,8 @@ btnComprar.addEventListener("click", () => {
     resultado.innerText = `Preço Total: R$ ${precoTotal},00`;
     aviso.innerText = ` Clique no botão do Whatsapp para pedir os produtos selecionados! `
 
-    const msgWhats = encodeURI(`Olá, gostaria de comprar os seguintes produtos:\n\n${listaProdutos.join("\n")}`);
-    whatsLink.href = `https://wa.me/${whats}?text=${msgWhats + precoTotal}`;
+    const msgWhats = encodeURI(`Olá, gostaria de comprar os seguintes produtos:\n\n${listaProdutos.join("\n")}\n\n Preço Total: R$${precoTotal}`);
+    whatsLink.href = `https://wa.me/${whats}?text=${msgWhats}`;
 })
 
 cards.forEach(produto => {

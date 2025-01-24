@@ -49,3 +49,29 @@ body {
 button:hover {
     opacity: 0.8;
 }
+
+.resultado {
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.whatsapp-sticky {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #25d366;
+    color: black;
+    padding: 15px;
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+    box-shadow: 0 4px 6px rgb(104, 104, 104);
+}
+
+.whatsapp-sticky:hover {
+    opacity: 0.8;
+}

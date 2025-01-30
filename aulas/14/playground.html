@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="banner" style="width: 200px; height: 100px; background: red;"></div>
+    <button id="btn">Clique aqui e ganhe 100000</button>
+
+    <script>
+        const banner = document.getElementById("banner");
+        const btn = document.getElementById("btn");
+        setTimeout(() => {banner.style.display = "none"}, 3000);
+
+        setInterval(() => {
+            btn.style.opacity = btn.style.opacity === "0" ? "1" : "0";
+        }, 300)
+    </script>
+</body>
+</html>

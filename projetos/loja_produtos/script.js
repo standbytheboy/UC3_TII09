@@ -36,5 +36,6 @@ cards.forEach(produto => {
         produto.classList.remove("card-selected");
         produto.style.display = "";
         resultado.innerText = "";
+        aviso.innerText= "";
     });
 })

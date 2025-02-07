@@ -24,7 +24,7 @@ addTask.addEventListener("click", () => {
     space.append(taskText);
     newTask.append(space);
 
-    taskText.innerText = text; // chat
+    taskText.innerText = text;
     list.append(newTask);
 
     remove.className = "btnApagar"
@@ -34,7 +34,6 @@ addTask.addEventListener("click", () => {
     remove.addEventListener("click", () => {
         newTask.remove();
     })
-
 
     newCheck.addEventListener("change", () => {
         taskText.classList.toggle("completed", newCheck.checked) // botão checado

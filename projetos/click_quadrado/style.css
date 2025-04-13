@@ -11,14 +11,14 @@ body {
 }
 
 :root {
-    --gradiente: linear-gradient(to right, rgb(149 114 252), rgb(67 231 173), rgb(226 212 92))
+    --gradiente: linear-gradient(to right, rgb(149 114 252), rgb(67 231 173), rgb(226 212 92));
 }
 
 .title {
     margin: 20px auto;
-    width: 38rem;
+    max-width: 90%;
     font-family: "Bebas Neue";
-    font-size: 5rem;
+    font-size: clamp(2.5rem, 8vw, 5rem);
     background-image: var(--gradiente);
     background-clip: text;
     -webkit-background-clip: text;
@@ -26,13 +26,14 @@ body {
 }
 
 #start-button {
-    padding: 1rem;
+    padding: 1rem 2rem;
     border: none;
     border-radius: 10px;
     background-image: var(--gradiente);
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
+    margin-bottom: 1rem;
 }
 
 #start-button:hover {
@@ -40,8 +41,9 @@ body {
 }
 
 #game-area {
-    width: 600px;
-    height: 600px;
+    width: 90vw;
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
     border: 2px solid;
     border-radius: 20px;
     background-color: #a7a7a73a;
@@ -51,8 +53,10 @@ body {
 
 #square,
 #square2 {
-    width: 50px;
-    height: 50px;
+    width: 8vw;
+    max-width: 50px;
+    height: 8vw;
+    max-height: 50px;
     background-color: blue;
     position: absolute;
     cursor: pointer;
